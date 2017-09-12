@@ -1,203 +1,155 @@
-# The Cayman Blog theme
+# Simple Texture Jekyll Theme
 
-[![Build Status](https://travis-ci.org/lorepirri/cayman-blog.svg?branch=master)](https://travis-ci.org/lorepirri/cayman-blog) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-cayman-blog.svg)](https://badge.fury.io/rb/jekyll-theme-cayman-blog)
+![Gem Version](https://img.shields.io/gem/v/jekyll-theme-simple-texture.svg)
 
-*Cayman Blog is a Jekyll theme for GitHub Pages. It is based on the nice [Cayman theme](https://pages-themes.github.io/cayman/), with blogging features added. You can [preview the theme to see what it looks like](http://lorepirri.github.io/cayman-blog), or even [use it today](#usage).*
+Simple Texture is a gem-based responsive simple texture styled Jekyll theme for [Jekyll][Jekyll] 3.3 or above,
+which can also be forked as a boilerplate for older versions of Jekyll.
 
-<img src="https://raw.githubusercontent.com/lorepirri/cayman-blog/master/thumbnail.png" alt="Thumbnail of cayman-blog" style="max-width:30%; border: 1px solid grey;"/> <img src="https://raw.githubusercontent.com/lorepirri/cayman-blog/master/thumbnail-mobile.png" alt="Thumbnail of cayman-blog for mobile" style="width: 239px; height: 424px;"/>
+## Demo
 
-## Install
+- Starter-kit demo:
+<https://yizeng.github.io/jekyll-theme-simple-texture/>
+- My own personal blog: <http://yizeng.me/blog>
 
-Cayman Blog Theme has been developed as a Jekyll theme gem for easier use. It is also 100% compatible with GitHub Pages — just with a more involved installation process according to whether you’re _running Jekyll v3.3+ and self-hosting_, or if you’re *hosting with GitHub Pages*.
+![Screenshot - Home](assets/images/screenshots/home.png)
 
-## Self hosting
+![Screenshot - Blog](assets/images/screenshots/post.png)
 
-If you’re running Jekyll v3.3+ and **self-hosting** you can quickly install the theme as Ruby gem:
+## Installation
 
-1. Add this line to your Jekyll site’s Gemfile:
+### As a Jekyll theme gem (Jekyll >= 3.3)
 
-    ```
-    gem "jekyll-theme-cayman-blog"
-    ```
+If you are creating a new website or blog,
+please follow the commands below first:
 
-2. Add this line to your Jekyll site’s _config.yml file:
+1. Install Jekyll and [Bunlder][Bunlder]
 
-    ```
-    theme: jekyll-theme-cayman-blog
-    ```
+       gem install jekyll bundler
 
-3. Then run Bundler to install the theme gem and dependencies:
+2. Create a new Jekyll app
 
-    ```
-    script/bootstrap
-    ```
+       jekyll new jekyllapp
 
-## Hosting with GitHub Pages
+3. Enter the new directory
 
-If you’re *hosting your blog with GitHub Pages* you’ll have to consider this:
+       cd jekyllapp
 
-:warning: As stated in the official [Jekyll documentation](https://jekyllrb.com/docs/themes/#installing-a-theme):
+Then for newly created or existing Jekyll app,
 
-> If you’re publishing your Jekyll site on [GitHub Pages](https://pages.github.com/), note that GitHub Pages supports only some gem-based themes. See [Supported Themes](https://pages.github.com/themes/) in GitHub’s documentation to see which themes are supported.
+1. Install Bundler if haven't done so.
 
-Therefore, this theme, as well as many others, can not be installed in the same way as the ones officially supported by GitHub Pages (e.g. Cayman, Minima), a bit more effort has to be put on.
+       gem install bundler
 
-The easiest way I found to install _Cayman Blog Theme_, is [installing the theme gem](gem-install), and then [converting the gem-based theme to regular theme](https://jekyllrb.com/docs/themes/#converting-gem-based-themes-to-regular-themes).
+2. Remove Jekyll auto-generated default pages `about.md` and `index.md`.
 
-Alternatively, for new projects, one could fork the whole theme, and keep only the interesting files.
+3. Download the respository [here](https://github.com/yizeng/jekyll-theme-simple-texture/archive/master.zip)
+and locate `starter-kit` folder,
+or download `starter-kit` folder directly [here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/yizeng/jekyll-theme-simple-texture/tree/master/starter-kit).
 
+4. Put everything in the `starter-kit` in the root directory,
+i.e. `jekyllapp` in this example.
 
-### Gem Install
+5. Run `bundle install` to install dependencies.
 
-This method is preferred for existing _Jekyll blogs_, as well as newly created ones. Notice that the files `index.md`, `about.md`, `contact.md` will be overwritten (only `index.md` is really needed, the other two are just placeholders).
+6. Run Jekyll with `bundle exec jekyll serve`
 
-1. Install the theme gem: ` $ gem install jekyll-theme-cayman-blog`
-3. Run `$ gem env gemdir` to know where the gem was installed
-4. Open the folder shown in the output
-5. Open the folder `gems`
-5. Open the theme folder (e.g. `jekyll-theme-cayman-blog-0.0.5`)
-6. Copy all the files into your newly created or existing blog folder    
-7. Leave empty `theme` your site's `_config.yml`:
+7. Hack away at <http://localhost:4000>!
 
-    ```yml
-    theme:
-    ```
-6. Modify `_config.yml`, `about.md`, `contact.md` for your project
-7. [Customize the theme](customizing)
+### As a fork
 
-### Install as a Fork
+1. Fork the repo [here](https://github.com/yizeng/jekyll-theme-simple-texture#fork-destination-box)
 
-1. [Fork the repo](https://github.com/lorepirri/cayman-blog)
-2. Clone down the repo with `$ git clone git@github.com:username/reponame.git`
-3. Delete the `screenshot.png` and `screenshot-mobile.png` files
-3. Empty the `_posts` folder
-4. Install bundler and gems with `$ script/bootstrap`
-5. Run Jekyll with `$ script/server`
-6. Modify `_config.yml`, `about.md`, `contact.md` for your project
-7. [Customize the theme](customizing)
+2. Clone the repo just forked.
 
-## Customizing
+       git clone git@github.com:[YOUR_USERNAME]/jekyll-theme-simple-texture.git
 
-### Configuration variables
+3. Delete `starter-kit` folder and `jekyll-theme-simple-texture.gemspec` file (they're for people installing via gem)
 
-Cayman Blog will respect the following variables, if set in your site's `_config.yml`:
+4. Install Bundler if haven't done so.
 
-```yml
-title: [The title of your site]
-description: [A short description of your site's purpose]
-```
+       gem install bundler
 
-Additionally, you may choose to set the following optional variables:
+5. Update the `Gemfile` to look like the following:
 
-```yml
-show_downloads: ["true" or "false" to indicate whether to provide a download URL]
-google_analytics: [Your Google Analytics tracking ID]
-```
+   ```ruby
+   source "https://rubygems.org"
 
-### RSS feeds
+   gem 'jekyll', '= 3.4.5' # locked in to be consistent GitHub Pages.
 
-To enable RSS feeds and also make visible an RSS feeds button in the footer, the [Jekyll Feed plugin](https://github.com/jekyll/jekyll-feed) must be installed.
+   group :jekyll_plugins do
+     gem 'jekyll-feed'
+     gem 'jekyll-redirect-from'
+     gem 'jekyll-seo-tag'
+     gem 'jekyll-sitemap'
+   end
+   ```
 
-Add this line to your site's Gemfile:
+6. Run `bundle install` to install dependencies.
 
-```ruby
-gem 'jekyll-feed'
-```
+7. Run Jekyll with `bundle exec jekyll serve`
 
-And then add this line to your site's `_config.yml`:
-
-```yml
-gems:
-  - jekyll-feed
-```
-
-For more information about configuring this plugin, see the official [Jekyll Feed plugin](https://github.com/jekyll/jekyll-feed) page.
-
-### SEO tags
-
-Cayman Blog includes simple SEO tags from [jekyll-social-metatags](https://github.com/lorepirri/jekyll-social-metatags). Have a look at the page for its usage.
-
-The usage is compatible with the plugin [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag), which provides a battle-tested template of crowdsourced best-practices.
-
-To switch to a better SEO tags however, one should install [Jekyll Feed plugin](https://github.com/jekyll/jekyll-feed):
-
-1. Add this line to your site's Gemfile:
-
-    ```ruby
-    gem 'jekyll-seo-tag'
-    ```
-
-2. And then add this line to your site's `_config.yml`:
-
-    ```yml
-    gems:
-      - jekyll-seo-tag
-    ```
-
-3. Replace with the following, the `<!-- jekyll-seo-tag -->` comment in your site's `default.html`:
-
-      ```liquid
-      {% seo %}
-      ```
-
-For more information about configuring this plugin, see the official [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag) page.
-
-
-### Stylesheet
-
-If you'd like to add your own custom styles:
-
-1. Create a file called `/assets/css/style.scss` in your site
-2. Add the following content to the top of the file, exactly as shown:
-    ```scss
-    ---
-    ---
-
-    @import "{{ site.theme }}";
-    ```
-3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
-
-### Layouts
-
-If you'd like to change the theme's HTML layout:
-
-1. [Copy the original template](https://github.com/lorepirri/cayman-blog/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
-2. Create a file called `/_layouts/default.html` in your site
-3. Paste the default layout content copied in the first step
-4. Customize the layout as you'd like
-
-### Sass variables
-
-If you'd like to change the theme's [Sass variables](https://github.com/lorepirri/cayman-blog/blob/master/_sass/variables.scss), set new values before the `@import` line in your stylesheet:
-
-```scss
-$section-headings-color: #0086b3;
-
-@import "{{ site.theme }}";
-```
-
-## Roadmap
-
-See the [open issues](https://github.com/lorepirri/cayman-blog/issues) for a list of proposed features (and known issues).
-
-## Project philosophy
-
-The Cayman Blog theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
+8. Hack away at <http://localhost:4000>!
 
 ## Contributing
 
-Interested in contributing to Cayman Blog? We'd love your help. Cayman Blog is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](CONTRIBUTING.md) for instructions on how to contribute.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/yizeng/jekyll-theme-simple-texture>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-### Previewing the theme locally
+## Credits
 
-If you'd like to preview the theme locally (for example, in the process of proposing a change):
+- [Jekyll][Jekyll]
+  + [jekyll-feed](https://github.com/jekyll/jekyll-feed)
+  + [jekyll-redirect-from](https://github.com/jekyll/jekyll-redirect-from)
+  + [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag)
+  + [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
+  + [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)
+  + [Jekyll-Bootstrap](http://jekyllbootstrap.com/)
+  + [theme-the-program](https://github.com/jekyllbootstrap/theme-the-program)
 
-1. Clone down the theme's repository (`git clone https://github.com/lorepirri/cayman-blog`)
-2. `cd` into the theme's directory
-3. Run `script/bootstrap` to install the necessary dependencies
-4. Run `script/server` to start the preview server
-5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
+- [Sass](http://sass-lang.com/)
+  + [Normalize.css](https://necolas.github.io/normalize.css/)
+  + [Animate.css](https://daneden.github.io/animate.css/)
+  + [Simple Icons](https://simpleicons.org/)
+  + [Noise Texture Generator](http://www.noisetexturegenerator.com/)
+- JavaScript
+  + [cdnjs](https://cdnjs.com/)
+  + [jQuery](https://jquery.com/)
+  + [fullPage.js](https://alvarotrigo.com/fullPage/)
+  + [pace.js](http://github.hubspot.com/pace/docs/welcome/)
+  + [Modernizr](https://modernizr.com/)
+  + [FancyBox](http://fancybox.net/)
+  + [unveil.js](http://luis-almeida.github.io/unveil/)
+- Fonts
+  + [Font Squirrel](https://www.fontsquirrel.com/)
+  + [Bitter](https://fonts.google.com/specimen/Bitter)
+  + [Junge](https://fonts.google.com/specimen/Junge)
+  + [Ubuntu Condensed](https://fonts.google.com/specimen/Ubuntu+Condensed)
 
-### Running tests
+## License
 
-The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` one before the test script will work.
+The theme is available as open source under the terms of the
+[MIT License](https://github.com/yizeng/jekyll-theme-simple-texture/blob/master/LICENSE).
+
+    MIT License
+
+    Copyright (c) 2017 Yi Zeng
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+
+[Jekyll]: http://jekyllrb.com/
+[Bunlder]: http://bundler.io/
