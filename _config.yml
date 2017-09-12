@@ -37,22 +37,22 @@ author:
     - name: github
       url: https://github.com/xhrjdzw/
     - name: instagram
-      url:
+      url: https://xhrjdzw.github.io/Xhrboke.github.io/
     - name: linkedin
-      url:
+      url: https://xhrjdzw.github.io/Xhrboke.github.io/
     - name: stackoverflow
-      url:
+      url: https://xhrjdzw.github.io/Xhrboke.github.io/
     - name: twitter
-      url: 
+      url:  https://xhrjdzw.github.io/Xhrboke.github.io/
     - name: vk
-      url:
+      url: https://xhrjdzw.github.io/Xhrboke.github.io/
 home:
   section1: <h1>徐浩然的博客</h1>
   section2: <h2>A dreamer worker geeker</h2>
-  section3: <div class="social-links"><a class="ico-github btn" href="https://github.com/yizeng/jekyll-theme-simple-texture" title="View on GitHub"></a></div>
+  section3: <div class="social-links"><a class="ico-github btn" href="https://xhrjdzw.github.io/Xhrboke.github.io/" title="View on GitHub"></a></div>
 blog:
-  cc_license: # A link to CC License of your choice, e.g. http://creativecommons.org/licenses/by-sa/4.0/.
-  cc_license_image: # An image of your CC License, e.g. /assets/images/theme/cc-by-sa.png
+  cc_license: # https://xhrjdzw.github.io/Xhrboke.github.io/
+  cc_license_image: # Ahttps://xhrjdzw.github.io/Xhrboke.github.io/
   footer_content: A gem-based responsive simple texture styled Jekyll theme.
 
 disqus:
