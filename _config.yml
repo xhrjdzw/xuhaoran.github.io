@@ -32,19 +32,9 @@ author:
   location: 北京
   email: xhrjdzw@126.com
   social_links:
-    - name: 简历
-      url: https://xhrjdzw.github.io/Xhrboke.github.io/
     - name: github
       url: https://github.com/xhrjdzw/
-    - name: instagram
-      url: https://xhrjdzw.github.io/Xhrboke.github.io/
-    - name: linkedin
-      url: https://xhrjdzw.github.io/Xhrboke.github.io/
     - name: stackoverflow
-      url: https://xhrjdzw.github.io/Xhrboke.github.io/
-    - name: twitter
-      url:  https://xhrjdzw.github.io/Xhrboke.github.io/
-    - name: vk
       url: https://xhrjdzw.github.io/Xhrboke.github.io/
 home:
   section1: <h1>徐浩然的博客</h1>
